@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="background-music" loop>
+      <source src="images/MyOnlyLove.mp3" type="audio/mp3" />
+      <source src="images/MyOnlyLove.ogg" type="audio/ogg" />
+    </audio>
+    <div class="balloons">
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+    </div>
+    <br /><br /><br /><br />
+    <div class="container">
+      <h1 id="message">Happy Birthday, My Love!</h1>
+      <br /><br />
+      <div class="messages">
+        <p class="message" data-step="1">
+          On this special day, I want you to know
+        </p>
+        <p class="message" data-step="2">just how much you mean to me</p>
+        <p class="message" data-step="3">And how I LOVE YOU!</p>
+        <p class="message" data-step="4">
+          I hope this year brings you all the happiness and success you deserve
+        </p>
+        <p class="message" data-step="5">
+          and that your days are filled with love and joy.
+        </p>
+        <p class="message" data-step="6">Enjoy your day to the fullest!</p>
+        <b
+          ><p class="message" data-step="7">
+            I love you more than words can express❤️.
+          </p></b
+        >
+        <button id="nextBtn" class="btn">Click here</button>
+      </div>
+      <br /><br />
+      <img
+        src="https://media.giphy.com/media/Lkw7QvEHjNeiHN2poQ/giphy.gif?cid=790b7611vev1aycibjmfc793z7dq1w8cl3p9noxb8d8oqz4p&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+        alt="Happy Birthday"
+        class="gif"
+      />
+    </div>
+
+    <script>
+      let currentStep = 0;
+      const messages = document.querySelectorAll(".message");
+      const nextBtn = document.getElementById("nextBtn");
+      const backgroundMusic = document.getElementById("background-music");
+
+      messages.forEach((message) => (message.style.display = "none"));
+
+      nextBtn.addEventListener("click", () => {
+        if (currentStep === 0) {
+          backgroundMusic.play();
+          nextBtn.textContent = "Click here again";
+        }
+
+        if (currentStep < messages.length) {
+          if (currentStep > 0) {
+            messages[currentStep - 1].style.display = "none";
+          }
+          messages[currentStep].style.display = "block";
+          currentStep++;
+          if (currentStep === 7) {
+            message.style.display = "none";
+            nextBtn.textContent = "I LOVE YOU ABDO";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

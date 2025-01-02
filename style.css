@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(194, 217, 255);
+  overflow: hidden;
+}
+
+.container {
+  height: 70%;
+  width: 70%;
+  align-self: center;
+  max-width: 90%;
+  margin: auto;
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  color: #173465;
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+p {
+  color: #173465;
+  font-size: x-large;
+  line-height: 1.6;
+  font-family:'Times New Roman', Times, serif ;
+  font-weight: bolder;
+}
+.messages .message:last-child {
+  font-size: xx-large;
+  color: #ff3366;
+}
+img {
+  width: 30%;
+  border-radius: 50%;
+  box-shadow: 1px 2px rgba(65, 64, 64, 0.575);
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #d1e3ff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+  background: #ff3366;
+  transform: scale(1.1);
+}
+
+.balloons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.balloon {
+  background-color: aqua;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  left: 10px;
+  animation: move 2s ease-in infinite;
+}
+
+.balloon::before {
+  content: "";
+  height: 80px;
+  width: 3px;
+  position: absolute;
+  background-color: rgba(146, 145, 145, 0.76);
+  top: 98%;
+  left: 45%;
+}
+
+@keyframes move {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.balloon:nth-child(2) {
+  left: 20%;
+  top: 40%;
+  background-color: rgba(192, 93, 36, 0.697);
+  animation-duration: 3s;
+}
+
+.balloon:nth-child(3) {
+  left: 30%;
+  top: 40%;
+  background-color: rgba(177, 18, 240, 0.87);
+  animation-duration: 7s;
+}
+
+.balloon:nth-child(4) {
+  left: 40%;
+  top: 40%;
+  background-color: rgba(214, 33, 87, 0.863);
+  animation-duration: 5s;
+}
+
+.balloon:nth-child(5) {
+  left: 50%;
+  top: 40%;
+  background-color: rgb(26, 38, 209);
+  animation-duration: 6s;
+}
+
+.balloon:nth-child(6) {
+  left: 60%;
+  top: 40%;
+  background-color: rgb(192, 41, 36);
+  animation-duration: 4s;
+}
+
+.balloon:nth-child(7) {
+  left: 70%;
+  top: 40%;
+  background-color: rgb(4, 36, 4);
+  animation-duration: 3s;
+}
+
+.balloon:nth-child(8) {
+  left: 80%;
+  top: 40%;
+  background-color: rgba(15, 97, 4, 0.938);
+  animation-duration: 5s;
+}
+
+.balloon:nth-child(9) {
+  left: 90%;
+  top: 40%;
+  background-color: rgb(36, 192, 36);
+  animation-duration: 4s;
+}
+
+.balloon:nth-child(10) {
+  left: 100%;
+  top: 40%;
+  background-color: rgba(36, 130, 192, 0.281);
+  animation-duration: 3s;
+}
+.messages .message {
+  display: none;
+}
+
+#step1:checked ~ .messages .message[data-step="1"],
+#step2:checked ~ .messages .message[data-step="2"],
+#step3:checked ~ .messages .message[data-step="3"],
+#step4:checked ~ .messages .message[data-step="4"],
+#step5:checked ~ .messages .message[data-step="5"]
+ {
+  display: block;
+}
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #94daff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+  background: #c9ecff;
+  transform: scale(1.1);
+}
